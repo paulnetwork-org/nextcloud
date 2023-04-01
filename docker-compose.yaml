@@ -6,10 +6,10 @@ services:
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_ROOT_PASSWORD: changeme
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
-      MYSQL_PASSWORD: nextcloud
+      MYSQL_PASSWORD: changeme
     volumes:
       - db:/var/lib/mysql
 
@@ -30,7 +30,7 @@ services:
       MYSQL_HOST: db
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: nextcloud
-      MYSQL_PASSWORD: nextcloud
+      MYSQL_PASSWORD: changeme
       REDIS_HOST: redis
     volumes:
       - nextcloud:/var/www/html
